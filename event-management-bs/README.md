@@ -11,6 +11,7 @@ MySQL Database
 # Installation
 
 git clone <repository-url>
+
 cd event-management-bs
 
 Install dependencies:
@@ -28,6 +29,7 @@ JWT_SECRET="SECREt KEY"
 ## Database Setup
 
 `npx prisma generate`
+
 `npx prisma migrate dev --name init`
 
 ## Available Scripts
