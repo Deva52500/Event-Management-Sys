@@ -33,9 +33,11 @@ const authorizeAdmin = (req, res, next) => {
   next();
 };
 
+// User registration
 app.post('/auth/register', async (req, res) => {
   try {
     const { name, email, password } = req.body;
+    // Password encryption
     const passwordHash = await bcrypt.hash(password, 10);
     const user = await prisma.user.create({
       data: { name, email, passwordHash },
@@ -46,11 +48,13 @@ app.post('/auth/register', async (req, res) => {
   }
 });
 
+// User login
 app.post('/auth/login', async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await prisma.user.findUnique({ where: { email } });
-
+    
+// Check and compare the entered password 
     if (!user || !(await bcrypt.compare(password, user.passwordHash))) {
       return res.status(401).json({ message: 'Invalid credentials.' });
     }
@@ -62,6 +66,8 @@ app.post('/auth/login', async (req, res) => {
   }
 });
 
+
+// To get all the events
 app.get('/events', async (req, res) => {
   try {
     const { date, category, location } = req.query;
@@ -79,6 +85,7 @@ app.get('/events', async (req, res) => {
   }
 });
 
+// To create an event
 app.post('/event', authenticate, authorizeAdmin, async (req, res) => {
   try {
     const { title, description, date, category, locationId } = req.body;
@@ -100,8 +107,7 @@ app.post('/event', authenticate, authorizeAdmin, async (req, res) => {
         createdById: 1, 
       },
     });
-    //console.log("Data:", data.locationId)
-    //console.log("Data:", event)
+
     res.status(201).json(event);
   } catch (err) {
     console.error(err);
@@ -109,6 +115,7 @@ app.post('/event', authenticate, authorizeAdmin, async (req, res) => {
   }
 });
 
+// To update an event
 app.put('/events/:id', authenticate, authorizeAdmin, async (req, res) => {
   try {
     const { id } = req.params;
@@ -123,6 +130,7 @@ app.put('/events/:id', authenticate, authorizeAdmin, async (req, res) => {
   }
 });
 
+// Delete an event 
 app.delete('/events/:id', authenticate, authorizeAdmin, async (req, res) => {
   try {
     const { id } = req.params;
@@ -171,6 +179,7 @@ app.post('/events/:id/registerevent', authenticate, async (req, res) => {
   }
 });
 
+// To get the registered events
 app.get('/events/registrations', authenticate, async (req, res) => {
   try {
     const registrations = await prisma.eventRegistration.findMany({
