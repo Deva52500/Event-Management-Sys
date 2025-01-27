@@ -11,14 +11,21 @@ const Header = () => {
     navigate("/login"); 
   };
 
+  const goToHome = () => { 
+    navigate("/home"); 
+  };
+
   return (
     <header style={{ padding: "10px", backgroundColor: "#f5f5f5", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
       
       <div>
       <h1>Event Management System</h1><br/>
       </div>
-      <button onClick={handleLogout} >
+      <button style= {{margin:"10px"}} onClick={handleLogout} >
         Logout
+      </button>
+      <button style= {{margin:"10px"}} onClick={goToHome} >
+        Home
       </button>
     </header>
   );
