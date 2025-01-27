@@ -14,7 +14,9 @@
 ![UserRegistration](https://github.com/user-attachments/assets/f15cc5a0-00b2-4c29-a6b6-a427275bdf25)
 
 ### Events management
-![Admin](https://github.com/user-attachments/assets/5066d52d-fec8-45b6-82ee-96699ad2a3ca)
+![manage events](https://github.com/user-attachments/assets/9b9fa40e-8af3-43f5-af1d-3cbcd8d4d6ae)
+
+![update events](https://github.com/user-attachments/assets/2bae51e4-cef1-42b9-8e4c-5eb05b9e7eff)
 
 ![deleteEvents](https://github.com/user-attachments/assets/027b8497-3473-4696-af50-a5d419f6fade)
 
