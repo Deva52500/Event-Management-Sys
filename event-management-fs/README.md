@@ -2,16 +2,21 @@
 
 # Frontend UI 
 ### Login Page
-![login](https://github.com/user-attachments/assets/8c8b2049-b217-43f5-a565-29a1b841f9cf)
+![login](https://github.com/user-attachments/assets/43361e71-c5ae-4805-9b49-320cf40d1c35)
 
 ### Register Page
-![register](https://github.com/user-attachments/assets/7cde4a63-1c1c-4760-a8fa-59c7672823e1)
+![register](https://github.com/user-attachments/assets/879ccd6a-1e3a-4240-b3c3-0c5c4130fbb3)
 
 ### Display Events
-![events](https://github.com/user-attachments/assets/628399ce-5d58-4030-8959-12cd3cc8c80e)
+![home](https://github.com/user-attachments/assets/e381bc25-c85e-4589-8f13-84870adb51aa)
+
+### User Registration
+![UserRegistration](https://github.com/user-attachments/assets/f15cc5a0-00b2-4c29-a6b6-a427275bdf25)
 
 ### Events management
 ![Admin](https://github.com/user-attachments/assets/604b1066-d689-4310-bada-d97221692b52)
+
+![deleteEvents](https://github.com/user-attachments/assets/027b8497-3473-4696-af50-a5d419f6fade)
 
 
 # Prerequisites
