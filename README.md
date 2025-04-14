@@ -16,13 +16,12 @@ Users can register, log in, create tasks, filter tasks (completed/incomplete), a
 
 ## Installation
 
-### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 
-### 2. Set up backend
+### 1. Set up backend
 cd backend
 npm install
 
@@ -32,7 +31,7 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
 
-### 3. Set up the frontend
+### 2. Set up the frontend
 cd frontend
 npm install
 
